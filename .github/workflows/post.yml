@@ -1,4 +1,4 @@
-name: Auto Post to Facebook
+name: Post to Facebook
 
 on:
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install axios
+      - run: npm install
       - run: node post.js
         env:
           FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
